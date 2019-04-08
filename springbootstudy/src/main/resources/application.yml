@@ -1,0 +1,33 @@
+
+
+spring:
+  application:
+    name: springboot
+  main:
+    banner-mode: "off"
+  cache:
+    type: simple
+
+server:
+  port: 8886
+  context-path: /springBootStudy
+spring.rest
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:8886/eureka/
+    fetch-registry: false
+    register-with-eureka: false
+
+management:
+  security:
+    enabled: false
+
+configtask:
+    cron: "0 0 0,1,2,3,4,5,6,20,21,22,23 * * ?"
+endpoints:
+  beans:
+    enabled: false
